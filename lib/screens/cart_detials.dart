@@ -6,6 +6,7 @@ import 'package:get_storage/get_storage.dart';
 import 'package:getx/state/cart_state.dart';
 import 'package:getx/widgets/TotalWidget.dart';
 import 'package:getx/widgets/cart_item_info.dart';
+import 'package:getx/widgets/change_quantity.dart';
 import 'package:getx/widgets/product_img.dart';
 import 'package:intl/intl.dart';
 
@@ -47,7 +48,8 @@ class CardDetialScreen extends StatelessWidget {
                                   Expanded(
                                       flex: 6,
                                       child: CartItemInfo(cardModel: controller.cart[index])
-                                  )
+                                  ),
+                                  // Center(child:  ChangeQuantity(controller: controller, )),
                                 ],
                               ),
                             ),
@@ -61,5 +63,4 @@ class CardDetialScreen extends StatelessWidget {
     );
   }
 }
-
 

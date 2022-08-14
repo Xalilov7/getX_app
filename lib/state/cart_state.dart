@@ -7,6 +7,8 @@ class MyCardController extends GetxController{
   sumCard(){
     return cart.map((e) => double.parse(e.price)).reduce((previousValue, element) => previousValue + element);
   }
+
+
   shippingFee(){
    return sumCard() * 0.1;
    }

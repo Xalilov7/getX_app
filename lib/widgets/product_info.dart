@@ -71,7 +71,7 @@ class ProductInfo extends StatelessWidget {
   }
 
   bool isExistsInCart(RxList<CardModel> cart, CardModel cartItem) {
-    return cart.contains(cartItem);
+    return cart.length == 0? false : cart.any((e) => e.id == cartItem.id) ? true:false;
   }
   }
 

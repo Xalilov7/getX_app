@@ -21,14 +21,16 @@ class TotalWidget extends StatelessWidget {
             children: [
               TotalItem(
                 text: "TOTAL",
-                value: formatCurrency.format(controller.sumCard().toString()),
+                value: formatCurrency.format(controller.sumCard()),
                 controller: controller,
                 isSubTotal: false,
               ),
               Divider(thickness: 1),
               TotalItem(text: "Delivery Charge", 
-                  value: formatCurrency.format(controller.shippingFee().toString()),
-                  isSubTotal: false, controller: controller)
+                  value: formatCurrency.format(controller.shippingFee()),
+                  isSubTotal: false, controller: controller),
+              Divider(thickness: 1),
+              TotalItem(text: "Sub total", value: formatCurrency.format(controller.shippingFee() + controller.sumCard()), isSubTotal: true, controller: controller)
             ],
           ),
         ),
